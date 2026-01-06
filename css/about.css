@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:800px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.5);
+    animation: fade 1s ease;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+    text-align:center;
+    font-size:50px;
+    margin-bottom:30px;
+}
+
+.section{
+    margin-bottom:35px;
+}
+
+.section h2{
+    font-size:28px;
+    margin-bottom:10px;
+    border-bottom:2px solid rgba(255,255,255,0.4);
+    padding-bottom:5px;
+}
+
+.section p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* Members list */
+.members ul{
+    list-style:none;
+}
+
+.members li{
+    font-size:18px;
+    margin:8px 0;
+}
+
+/* Back button */
+.back-btn{
+    display:block;
+    width:220px;
+    margin:30px auto 0;
+    padding:14px;
+    text-align:center;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
