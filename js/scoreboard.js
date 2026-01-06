@@ -1,9 +1,23 @@
-// Get current logged in username
-let username = localStorage.getItem("currentUser") || "Guest";
+// Load username
+let username = localStorage.getItem("currentUser");
+document.getElementById("displayName").innerText =
+    username ? "Welcome, " + username : "Guest";
 
-// Score generated based on number of attempts or random fallback
-let score = localStorage.getItem("userScore") || Math.floor(Math.random() * 100);
+// Guess the Number score
+document.getElementById("guessScore").innerText =
+    localStorage.getItem("guessScore") || 0;
 
-// Display on scoreboard
-document.getElementById("currentUser").innerText = username;
-document.getElementById("currentScore").innerText = score;
+// Memory Game score
+document.getElementById("memoryScore").innerText =
+    localStorage.getItem("memoryScore") || 0;
+
+// Logic Puzzle score
+let logicScore = localStorage.getItem("logicScore");
+if (logicScore !== null) {
+    document.getElementById("logicScore").innerText = logicScore;
+} else {
+    let correct = Number(localStorage.getItem("logicCorrect")) || 0;
+    let total = Number(localStorage.getItem("logicTotal")) || 0;
+    let calculated = total > 0 ? Math.round((correct / total) * 100) : 0;
+    document.getElementById("logicScore").innerText = calculated;
+}
