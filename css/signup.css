@@ -6,86 +6,78 @@
 }
 
 body{
-    height:100vh;
+    min-height:100vh;
+    background:linear-gradient(135deg,#141e30,#243b55);
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#141e30,#243b55);
     color:white;
 }
 
-/* Sign Up Box */
-.signup-box{
-    background:rgba(255,255,255,0.18);
-    backdrop-filter:blur(16px);
-    width:450px;
+.box{
+    width:420px;
     padding:45px;
-    border-radius:35px;
-    box-shadow:0 25px 50px rgba(0,0,0,0.45);
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    border-radius:30px;
     text-align:center;
-    animation: fadeIn 1s ease;
+    box-shadow:0 25px 50px rgba(0,0,0,0.5);
+    animation: pop 0.8s ease;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
-    to{opacity:1; transform:translateY(0);}
+@keyframes pop{
+    from{opacity:0; transform:scale(0.85);}
+    to{opacity:1; transform:scale(1);}
 }
 
 h1{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.tagline{
-    font-size:16px;
+    font-size:42px;
     margin-bottom:25px;
-    opacity:0.9;
 }
 
-/* Inputs */
 input{
     width:100%;
     padding:14px;
-    margin:10px 0;
+    margin-bottom:15px;
     border:none;
     border-radius:25px;
     font-size:16px;
-    outline:none;
+    text-align:center;
 }
 
-/* Button */
 button{
     width:100%;
     padding:14px;
-    margin-top:18px;
     border:none;
-    border-radius:30px;
-    font-size:18px;
+    border-radius:25px;
+    font-size:17px;
     font-weight:bold;
-    color:white;
-    background:linear-gradient(90deg,#6a5acd,#836fff);
     cursor:pointer;
+    color:white;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
     transition:0.3s;
 }
 
 button:hover{
     transform:scale(1.05);
-    box-shadow:0 0 20px rgba(255,255,255,0.6);
+    box-shadow:0 0 25px rgba(255,255,255,0.6);
 }
 
-/* Links */
-.links{
+.message{
+    margin-top:15px;
+    font-size:15px;
+    min-height:20px;
+}
+
+.link{
     margin-top:20px;
-}
-
-.links a{
     display:block;
-    margin-top:8px;
+    font-size:15px;
     color:white;
-    text-decoration:underline;
     opacity:0.9;
+    text-decoration:none;
 }
 
-.links a:hover{
+.link:hover{
     opacity:1;
 }
