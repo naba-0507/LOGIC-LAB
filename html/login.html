@@ -5,24 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Logic Lab | Login</title>
 
+<!-- CSS link -->
 <link rel="stylesheet" href="login.css">
 </head>
-
 <body>
 
-<div class="login-box">
+<div class="box">
     <h1>Login</h1>
-    <div class="tagline">Welcome back to Logic Lab</div>
 
-    <form action="dashboard.html">
-        <input type="text" placeholder="Username" required>
-        <input type="password" placeholder="Password" required>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
-        <button type="submit">Log In</button>
-    </form>
+    <button onclick="login()">Log In</button>
 
-    <a href="index.html" class="back">⬅ Back to Home</a>
+    <div class="message" id="msg"></div>
+
+    <a href="index.html" class="link">⬅ Back to Home</a>
 </div>
 
+<!-- JavaScript link -->
+<script src="login.js"></script>
 </body>
 </html>
