@@ -12,54 +12,61 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
+    animation: fadeInPage 1s ease;
 }
 
-.container{
-    width:600px;
+@keyframes fadeInPage{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.score-card{
+    width:500px;
     background:rgba(255,255,255,0.12);
     backdrop-filter:blur(14px);
     border-radius:30px;
     padding:40px;
     text-align:center;
     box-shadow:0 25px 50px rgba(0,0,0,0.5);
-    animation: fadeIn 1s ease;
+    animation: cardIn 0.9s ease;
 }
 
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(30px);}
+@keyframes cardIn{
+    from{opacity:0; transform:translateY(40px);}
     to{opacity:1; transform:translateY(0);}
 }
 
-h1{
-    font-size:45px;
+h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.username{
+    font-size:22px;
     margin-bottom:25px;
+    font-weight:bold;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+.score-box{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    margin-bottom:15px;
+    font-size:20px;
+    font-weight:500;
+    transition:0.3s;
 }
 
-th, td{
-    padding:12px;
-    font-size:18px;
-}
-
-th{
-    background:rgba(255,255,255,0.2);
-}
-
-tr:nth-child(even){
-    background:rgba(255,255,255,0.1);
+.score-box:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 15px rgba(255,255,255,0.3);
 }
 
 .back-btn{
     display:block;
-    width:220px;
+    width:230px;
     margin:30px auto 0;
     padding:14px;
-    text-align:center;
     border-radius:30px;
     font-size:18px;
     font-weight:bold;
