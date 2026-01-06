@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logic Lab | Home</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", Arial, sans-serif;
+}
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+}
+.home{
+    text-align:center;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    padding:70px;
+    width:540px;
+    border-radius:35px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.5);
+    animation: pop 1s ease;
+}
+@keyframes pop{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+h1{
+    font-size:70px;
+    margin-bottom:10px;
+}
+.tagline{
+    font-size:22px;
+    margin-bottom:35px;
+}
+.btn{
+    display:inline-block;
+    margin:10px;
+    padding:15px 40px;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#ff512f,#dd2476);
+    transition:0.3s;
+}
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(255,255,255,0.6);
+}
+.about-link{
+    display:block;
+    margin-top:25px;
+    font-size:16px;
+    color:white;
+    text-decoration:underline;
+    opacity:0.9;
+}
+.about-link:hover{
+    opacity:1;
+}
+</style>
+</head>
+
+<body>
+<div class="home">
+    <h1>Logic Lab</h1>
+    <div class="tagline">Think • Solve • Compete</div>
+
+    <a href="login.html" class="btn">Log In</a>
+    <a href="signup.html" class="btn">Sign Up</a>
+
+    <!-- About Page Link -->
+    <a href="about.html" class="about-link">About Logic Lab</a>
+</div>
+</body>
+</html>
