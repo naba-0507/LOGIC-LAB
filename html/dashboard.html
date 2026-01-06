@@ -5,25 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Logic Lab | Dashboard</title>
 
-<link rel="stylesheet" href="style.css">
+<!-- CSS Link -->
+<link rel="stylesheet" href="dashboard.css">
 </head>
 
 <body>
-
 <div class="dashboard">
-    <h1>Logic Lab</h1>
-    <div class="welcome">Welcome,  👋</div>
+    <h1>📊 Dashboard</h1>
+    <div id="welcome">Welcome!</div>
 
-    <div class="menu">
-        <a href="guess.html" class="btn">🎯 Guess the Number</a>
-        <a href="logic-puzzle.html" class="btn">🧩 Logic Puzzle</a>
-        <a href="quiz.html">📝 Quiz</a>
-        <a href="scoreboard.html">📊 Scoreboard</a>
+    <div class="games">
+        <div class="card">
+            <h2>🎯 Guess the Number</h2>
+            <p>Test your guessing skills</p>
+            <a href="guessnumber.html">Play</a>
+        </div>
+
+        <div class="card">
+            <h2>🧩 Logic Puzzle</h2>
+            <p>Solve brain‑teasing puzzles</p>
+            <a href="logicpuzzle.html">Play</a>
+        </div>
+
+        <div class="card">
+            <h2>🧠 Memory Game</h2>
+            <p>Improve focus & memory</p>
+            <a href="memorygame.html">Play</a>
+        </div>
+
+        <!-- CENTERED SCOREBOARD -->
+        <div class="card center-card">
+            <h2>🏆 Scoreboard</h2>
+            <p>View your game scores</p>
+            <a href="scoreboard.html">View</a>
+        </div>
     </div>
 
-    <a href="index.html" class="logout">Log Out</a>
+    <div class="bottom">
+        <a href="index.html">🏠 Home</a>
+        <a href="login.html">🚪 Logout</a>
+    </div>
 </div>
 
-<script src="script.js"></script>
+<!-- JS Link -->
+<script src="dashboard.js"></script>
 </body>
 </html>
