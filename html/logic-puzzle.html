@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logic Puzzle | Logic Lab</title>
+
+<link rel="stylesheet" href="logic-puzzle.css">
+</head>
+
+<body>
+<div class="puzzle-box">
+    <h1>🧠 Logic Puzzle</h1>
+    <p>Solve all 3 logic patterns</p>
+
+    <!-- Question 1 -->
+    <div class="question">
+        <p>1️⃣ Find the missing number:</p>
+        <div class="sequence">2 &nbsp; 6 &nbsp; 12 &nbsp; 20 &nbsp; ?</div>
+        <input type="number" id="q1">
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question">
+        <p>2️⃣ Find the missing number:</p>
+        <div class="sequence">1 &nbsp; 4 &nbsp; 9 &nbsp; 16 &nbsp; ?</div>
+        <input type="number" id="q2">
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question">
+        <p>3️⃣ Find the missing number:</p>
+        <div class="sequence">5 &nbsp; 10 &nbsp; 20 &nbsp; 40 &nbsp; ?</div>
+        <input type="number" id="q3">
+    </div>
+
+    <button onclick="checkAnswers()">Submit Answers</button>
+
+    <div class="result" id="result"></div>
+
+    <a href="dashboard.html" class="back">⬅ Back to Dashboard</a>
+</div>
+
+<script src="logic-puzzle.js"></script>
+</body>
+</html>
