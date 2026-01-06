@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logic Lab | Scoreboard</title>
-
-<link rel="stylesheet" href="scoreboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Lab | Scoreboard</title>
+    <link rel="stylesheet" href="scoreboard.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>🏆 Scoreboard</h1>
+<div class="score-card">
+    <h2>🏆 Scoreboard</h2>
 
-    <table>
-        <tr>
-            <th>Player</th>
-            <th>Score</th>
-        </tr>
+    <div class="username" id="displayName">Loading...</div>
 
-        <!-- Current Logged-in User -->
-        <tr>
-            <td id="currentUser"></td>
-            <td id="currentScore"></td>
-        </tr>
+    <div class="score-box">
+        🎯 Guess The Number: <span id="guessScore">0</span>
+    </div>
 
-        <!-- Random Players -->
-        <tr><td
+    <div class="score-box">
+        🧠 Logic Puzzle: <span id="logicScore">0</span>
+    </div>
+
+    <div class="score-box">
+        🧩 Memory Game: <span id="memoryScore">0</span>
+    </div>
+
+    <a href="dashboard.html" class="back-btn">⬅ Back to Dashboard</a>
+</div>
+
+<script src="scoreboard.js"></script>
+</body>
+</html>
+
