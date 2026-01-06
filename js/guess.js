@@ -1,31 +1,35 @@
-let secret = Math.floor(Math.random()*10) + 1;
+let secretNumber = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 
 function checkGuess(){
-    let input = document.getElementById("guess");
-    let value = input.value;
+    let guess = Number(document.getElementById("guessInput").value);
     let result = document.getElementById("result");
+    let attemptText = document.getElementById("attempts");
 
-    if(value === ""){
-        result.innerText = "⚠ Enter a number";
+    if(!guess){
+        result.innerText = "⚠ Please enter a number!";
+        result.style.color = "#FFD27C";
         return;
     }
 
     attempts++;
-    document.getElementById("attempts").innerText = "Attempts: " + attempts;
+    attemptText.innerText = "Attempts: " + attempts;
 
-    if(value == secret){
-        result.innerText = "🎉 Correct!";
+    if(guess === secretNumber){
+        result.innerText = "🎉 Correct! You guessed it!";
         result.style.color = "#7CFF7C";
 
-        localStorage.setItem("score_guess", attempts);
+        let score = Math.max(100 - attempts * 5, 10);
+        localStorage.setItem("guessScore", score);
     }
-    else if(value > secret){
-        result.innerText = "📉 Too high";
+    else if(guess > secretNumber){
+        result.innerText = "⬇ Too High";
         result.style.color = "#FFD27C";
     }
     else{
-        result.innerText = "📈 Too low";
+        result.innerText = "⬆ Too Low";
         result.style.color = "#FFD27C";
     }
+
+    document.getElementById("guessInput").value = "";
 }
