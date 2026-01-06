@@ -36,14 +36,13 @@ h1{
 }
 
 .section{
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .section h2{
     font-size:28px;
     margin-bottom:10px;
     border-bottom:2px solid rgba(255,255,255,0.4);
-    padding-bottom:5px;
 }
 
 .section p{
@@ -51,21 +50,20 @@ h1{
     line-height:1.7;
 }
 
-/* Members list */
-.members ul{
+ul{
     list-style:none;
+    padding-left:0;
 }
 
-.members li{
+ul li{
     font-size:18px;
     margin:8px 0;
 }
 
-/* Back button */
 .back-btn{
     display:block;
-    width:220px;
-    margin:30px auto 0;
+    width:240px;
+    margin:35px auto 0;
     padding:14px;
     text-align:center;
     border-radius:30px;
