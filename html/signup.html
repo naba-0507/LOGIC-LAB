@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logic Lab | Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Lab | Sign Up</title>
 
-<link rel="stylesheet" href="signup.css">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="signup.css">
 </head>
-
 <body>
 
-<div class="signup-box">
-    <h1>Create Account</h1>
-    <div class="tagline">Join Logic Lab today</div>
+<div class="box">
+    <h1>Sign Up</h1>
 
-    <form onsubmit="saveUser(); return false;">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <input type="password" id="confirm" placeholder="Confirm Password" required>
+    <input type="text" id="username" placeholder="Create Username">
+    <input type="password" id="password" placeholder="Create Password">
 
-        <button type="submit">Sign Up</button>
-    </form>
+    <button onclick="signup()">Sign Up</button>
 
-    <div class="links">
-        <a href="login.html">Already have an account? Log In</a>
-        <a href="index.html">⬅ Back to Home</a>
-    </div>
+    <div class="message" id="msg"></div>
+
+    <a href="login.html" class="link">Already have an account? Log In</a>
+    <a href="index.html" class="link">⬅ Back to Home</a>
 </div>
 
+<!-- JavaScript Link -->
 <script src="signup.js"></script>
 </body>
 </html>
