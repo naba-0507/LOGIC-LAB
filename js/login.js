@@ -19,7 +19,7 @@ function login(){
         msg.innerText = "✅ Login successful!";
 
         setTimeout(() => {
-            window.location.href = "dashboard.html";
+            window.location.href = "./dashboard.html";
         }, 800);
     } 
     else {
@@ -27,4 +27,5 @@ function login(){
         msg.innerText = "❌ Incorrect username or password";
     }
 }
+
 
