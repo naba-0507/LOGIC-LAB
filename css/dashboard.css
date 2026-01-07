@@ -123,6 +123,7 @@ h1{
     font-weight:bold;
     text-decoration:none;
     color:white;
+    align-items:center;
     background:linear-gradient(90deg,#ff512f,#dd2476);
     transition:0.3s;
 }
@@ -131,3 +132,4 @@ h1{
     transform:scale(1.08);
     box-shadow:0 0 25px rgba(255,255,255,0.6);
 }
+
