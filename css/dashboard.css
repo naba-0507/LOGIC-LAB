@@ -62,6 +62,9 @@ h1{
     box-shadow:0 20px 40px rgba(0,0,0,0.4);
     transition:0.3s;
     animation:pop 0.8s ease;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 @keyframes pop{
@@ -96,6 +99,7 @@ h1{
     color:white;
     background:linear-gradient(90deg,#ff512f,#dd2476);
     transition:0.3s;
+    margin-top: auto;
 }
 
 .card a:hover{
@@ -132,4 +136,5 @@ h1{
     transform:scale(1.08);
     box-shadow:0 0 25px rgba(255,255,255,0.6);
 }
+
 
