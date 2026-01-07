@@ -3,7 +3,7 @@ function login(){
     let password = document.getElementById("password").value;
     let msg = document.getElementById("msg");
 
-    // Stored signup data
+   
     let savedUser = localStorage.getItem("username");
     let savedPass = localStorage.getItem("password");
 
@@ -27,5 +27,6 @@ function login(){
         msg.innerText = "❌ Incorrect username or password";
     }
 }
+
 
 
