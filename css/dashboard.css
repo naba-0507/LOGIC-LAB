@@ -1,5 +1,5 @@
 
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,17 +18,17 @@ body {
 
 
 .dashboard {
-  width: min(1200px, 94vw);                   
+  width: min(1200px, 94vw);                  
   background: linear-gradient(135deg, #344351 0%, #3a4a59 100%);
   border-radius: 28px;
   box-shadow: 0 34px 90px rgba(0,0,0,0.45);
   padding: clamp(28px, 4vw, 44px);
 }
 
-/* ===== Header ===== */
+
 .title {
   text-align: center;
-  font-size: clamp(2.0rem, 5vw, 3.2rem);      
+  font-size: clamp(2.0rem, 5vw, 3.2rem);     
   font-weight: 900;
   margin-bottom: 6px;
 }
@@ -41,10 +41,11 @@ body {
 
 .games {
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr)); 
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   gap: clamp(18px, 2.6vw, 34px);
   align-items: stretch;
 }
+
 
 .card {
   background: rgba(255,255,255,0.10);
@@ -71,7 +72,7 @@ body {
 
 
 .center-card {
-  grid-column: 2 / 3;    
+  grid-column: 2 / 3;     
 }
 
 
@@ -94,7 +95,6 @@ a, a:visited { color: inherit; text-decoration: none; }
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(0,0,0,0.36); }
 
-
 .card .btn { height: 48px; border-radius: 24px; }
 
 
@@ -104,7 +104,6 @@ a, a:visited { color: inherit; text-decoration: none; }
   justify-content: center;
   margin-top: clamp(20px, 4vw, 34px);
 }
-
 
 .dashboard .games { margin-bottom: clamp(16px, 4vw, 28px); }
 
