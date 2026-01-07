@@ -1,4 +1,4 @@
-* {
+** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,70 +14,75 @@ body {
     align-items: center;
 }
 
-/* Main container */
+/* Dashboard container */
 .dashboard {
-    width: 800px;
-    background: rgba(255,255,255,0.12);
-    backdrop-filter: blur(14px);
-    padding: 40px;
+    width: 900px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 50px;
     border-radius: 30px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: space-between;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
-    to {opacity: 1; transform: scale(1);}
-}
-
-/* Left column */
-.left-panel {
-    flex: 1;
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 h1 {
-    font-size: 36px;
+    text-align: center;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
 #welcome {
+    text-align: center;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     opacity: 0.9;
 }
 
-/* Vertical cards */
+/* Game cards layout */
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+/* Individual card */
 .card {
-    background: rgba(255,255,255,0.15);
+    width: 100%;
+    max-width: 260px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 25px;
-    padding: 25px 20px;
-    margin-bottom: 20px;
+    padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 0 30px rgba(255,255,255,0.4);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .card h2 {
     font-size: 22px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .card p {
     font-size: 14px;
     opacity: 0.9;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
+/* Play/View buttons */
 .card a {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 10px 26px;
     border-radius: 25px;
     font-size: 14px;
     font-weight: bold;
@@ -89,22 +94,19 @@ h1 {
 
 .card a:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
 }
 
-/* Right navigation */
-.right-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-    margin-left: 30px;
+/* Bottom navigation */
+.bottom {
+    margin-top: 40px;
+    text-align: center;
 }
 
-.right-panel a {
+.bottom a {
+    margin: 10px;
     display: inline-block;
-    padding: 12px 28px;
+    padding: 12px 30px;
     border-radius: 30px;
     font-size: 16px;
     font-weight: bold;
@@ -114,8 +116,7 @@ h1 {
     transition: 0.3s;
 }
 
-.right-panel a:hover {
+.bottom a:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
-
