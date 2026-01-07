@@ -1,5 +1,5 @@
 // Load username
-let username = localStorage.getItem("currentUser");
+let username = localStorage.getItem("username") || "Guest";
 document.getElementById("displayName").innerText =
     username ? "Welcome, " + username : "Guest";
 
@@ -21,3 +21,4 @@ if (logicScore !== null) {
     let calculated = total > 0 ? Math.round((correct / total) * 100) : 0;
     document.getElementById("logicScore").innerText = calculated;
 }
+
