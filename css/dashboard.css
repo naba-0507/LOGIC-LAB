@@ -1,5 +1,6 @@
 
-*{
+/* ===== Reset & Base ===== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,72 +11,76 @@ html, body { height: 100%; }
 
 body {
   min-height: 100vh;
-  background: radial-gradient(1200px at 20% 10%, #132234, #0d1a2a);
+  background:
+    radial-gradient(1200px at 15% 10%, #0f1d2d 0%, #0b1626 35%, rgba(11,22,38,0.9) 100%),
+    linear-gradient(135deg, #102032, #15263c);
   color: #eaf0f7;
   display: grid;
   place-items: center;
 }
 
-
+/* ===== Dashboard shell (big rounded panel) ===== */
 .dashboard {
-  width: min(1200px, 94vw);                  
+  width: min(1200px, 94vw);                   /* wide like the second image */
   background: linear-gradient(135deg, #344351 0%, #3a4a59 100%);
   border-radius: 28px;
   box-shadow: 0 34px 90px rgba(0,0,0,0.45);
   padding: clamp(28px, 4vw, 44px);
 }
 
-
+/* ===== Header ===== */
 .title {
   text-align: center;
-  font-size: clamp(2.0rem, 5vw, 3.2rem);     
+  font-size: clamp(2.2rem, 5.4vw, 3.4rem);    /* big heading */
   font-weight: 900;
   margin-bottom: 6px;
 }
 .welcome {
   text-align: center;
   color: #dbe3ec;
-  margin-bottom: clamp(20px, 3vw, 32px);      
+  margin-bottom: clamp(20px, 3vw, 36px);      /* spacing under header */
 }
 
-
+/* ===== Cards grid ===== */
 .games {
   display: grid;
-  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* 3 columns on desktop */
   gap: clamp(18px, 2.6vw, 34px);
   align-items: stretch;
 }
 
-
+/* ===== Individual card ===== */
 .card {
   background: rgba(255,255,255,0.10);
-  border-radius: 24px;
-  padding: clamp(18px, 2.4vw, 28px) clamp(18px, 2.4vw, 30px);
-  box-shadow: 0 20px 46px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+  border-radius: 22px;
+  padding: clamp(20px, 2.6vw, 30px);
+  box-shadow:
+    0 22px 46px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.06);
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.08);
+  box-shadow: 0 32px 64px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .card h2 {
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
   font-weight: 800;
   margin: 2px 0 10px;
   color: #ffffff;
 }
 .card p {
   color: #cfd8e3;
-  margin: 0 0 18px;
+  margin: 0 0 20px;
 }
 
-
+/* ===== Center the Scoreboard card on its own row ===== */
 .center-card {
-  grid-column: 2 / 3;     
+  grid-column: 2 / 3; /* middle column on desktop grid -> centered */
 }
 
-
+/* ===== Buttons (anchors) ===== */
 a, a:visited { color: inherit; text-decoration: none; }
 
 .btn {
@@ -95,25 +100,28 @@ a, a:visited { color: inherit; text-decoration: none; }
 }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(0,0,0,0.36); }
 
+/* buttons inside cards: same size as screenshot */
 .card .btn { height: 48px; border-radius: 24px; }
 
-
+/* ===== Bottom action area (Home / Logout centered) ===== */
 .actions {
   display: flex;
   gap: clamp(12px, 2vw, 24px);
   justify-content: center;
-  margin-top: clamp(20px, 4vw, 34px);
+  margin-top: clamp(24px, 4vw, 36px);
 }
+.actions .btn { height: 50px; border-radius: 25px; }
 
-.dashboard .games { margin-bottom: clamp(16px, 4vw, 28px); }
+/* ===== Spacing between grid and actions ===== */
+.dashboard .games { margin-bottom: clamp(18px, 4vw, 28px); }
 
-
+/* ===== Responsive behaviour ===== */
 @media (max-width: 1100px) {
   .games { grid-template-columns: repeat(2, minmax(260px, 1fr)); }
-  .center-card { grid-column: 1 / -1; justify-self: center; width: min(560px, 100%); }
+  .center-card { grid-column: 1 / -1; justify-self: center; width: min(600px, 100%); }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   .dashboard { width: min(100%, 96vw); border-radius: 22px; }
   .games { grid-template-columns: 1fr; }
   .center-card { grid-column: auto; width: 100%; }
