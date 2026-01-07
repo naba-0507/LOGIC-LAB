@@ -1,21 +1,30 @@
-function checkAnswers(){
-    let score = 0;
+function login(){
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let msg = document.getElementById("msg");
 
-    // Correct answers
-    if(Number(document.getElementById("q1").value) === 30) score++; // n(n+1)
-    if(Number(document.getElementById("q2").value) === 25) score++; // squares
-    if(Number(document.getElementById("q3").value) === 80) score++; // ×2
+    // Stored signup data
+    let savedUser = localStorage.getItem("username");
+    let savedPass = localStorage.getItem("password");
 
-    // Save score for scoreboard
-    localStorage.setItem("logicScore", score);
+    if(username === "" || password === ""){
+        msg.style.color = "#FFD27C";
+        msg.innerText = "⚠ Please fill all fields";
+        return;
+    }
 
-    let result = document.getElementById("result");
+    if(username === savedUser && password === savedPass){
+        localStorage.setItem("loggedUser", username);
+        msg.style.color = "#7CFF7C";
+        msg.innerText = "✅ Login successful!";
 
-    if(score === 3){
-        result.innerText = "🎉 Excellent! All answers correct (3/3)";
-        result.style.color = "#7CFF7C";
-    } else {
-        result.innerText = "🧠 You solved " + score + " out of 3 puzzles";
-        result.style.color = "#FFD27C";
+        setTimeout(() => {
+            window.location.href = "dashboard.html";
+        }, 800);
+    } 
+    else {
+        msg.style.color = "#FF7C7C";
+        msg.innerText = "❌ Incorrect username or password";
     }
 }
+
